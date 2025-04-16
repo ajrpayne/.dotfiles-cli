@@ -1,0 +1,3 @@
+[submodule "nvim.astro/.config/nvim"]
+	path = nvim.astro/.config/nvim
+	url = https://github.com/ajrpayne/nvim.astro.git
