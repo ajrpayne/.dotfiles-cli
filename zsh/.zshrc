@@ -77,9 +77,11 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   kubectl
-  kind
+  terraform
   podman
   git
+  ssh
+  tmux
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-history-substring-search
