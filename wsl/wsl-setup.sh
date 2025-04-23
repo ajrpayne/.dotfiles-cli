@@ -87,7 +87,7 @@ setup_ssh() {
 # Function to change the default shell to zsh
 change_shell() {
   echo "Changing default shell to zsh..."
-  if ! chsh -s "$(which zsh)"; then
+  if ! chsh -s /bin/zsh; then
     echo "Failed to change shell"
     exit 1
   fi
