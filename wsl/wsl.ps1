@@ -1,4 +1,5 @@
 cd "$HOME\wsl"
+
 wsl --update
 wsl -l -v
 wsl --install archlinux
