@@ -7,15 +7,8 @@ wsl --unregister
 wsl --install archlinux
 wsl -d archlinux
 
-passwd
-useradd -m -g users -G wheel -s /bin/bash ajrpayne
-pacman -Syu
-pacman -S sudo
-echo "%wheel ALL=(ALL) ALL" >/etc/sudoers.d/wheel
-passwd ajrpayne
-echo "[user]" >> /etc/wsl.conf
-sed -i '/\[user\]/a default=ajrpayne' /etc/wsl.conf
-cat /etc/wsl.conf
+ls -lah
+../github/.dotfiles-cli/wsl/wsl-user.sh
 exit
 
 wsl --terminate archlinux
