@@ -18,7 +18,7 @@ exit
 wsl --terminate archlinux
 wsl -d archlinux
 
-./wsl-setup.sh
+../github/wsl/wsl-setup.sh
 exit
 
 wsl -d archlinux
