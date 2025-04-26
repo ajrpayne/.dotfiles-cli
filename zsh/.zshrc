@@ -119,6 +119,7 @@ export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_TIMEOUT=60
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey "^k" kill-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
