@@ -14,7 +14,8 @@ install_packages() {
     zsh nvim git base-devel podman kubectl stow which make zig \
     curl wget tar unzip openssh pyenv python-pip python-pynvim \
     ripgrep lazygit lua51 luarocks go npm gdu bottom \
-    tree-sitter-cli fd fzf terraform tmux || {
+    tree-sitter-cli fd fzf terraform tmux \
+    ldns kustomize || {
     echo "Package installation failed"
     exit 1
   }
@@ -34,7 +35,7 @@ install_packages() {
   cd ~ || exit 1
 
   # Install kind using yay
-  yay -S --noconfirm kind || {
+  yay -S --noconfirm kind go-yq || {
     echo "Failed to install kind"
     exit 1
   }
