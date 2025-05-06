@@ -28,3 +28,14 @@ rm .\arch.vhdx
 wsl --export arch --format vhd arch.vhdx
 wsl --unregister arch
 ```
+
+## missing items
+
+.gitconfig
+issue with ssh keys?
+ca cert
+sudo trust anchor /home/ajrpayne/ca.crt
+
+groups
+sudo usermod -aG docker $USER
+enable --now docker.socket

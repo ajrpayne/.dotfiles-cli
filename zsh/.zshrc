@@ -80,6 +80,9 @@ plugins=(
   kubectl
   terraform
   podman
+  docker
+  docker-compose
+  kind
   git
   ssh
   tmux
