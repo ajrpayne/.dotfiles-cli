@@ -80,7 +80,7 @@ setup_docker() {
 
 	groups
 	sudo usermod -aG docker "$USER"
-	enable --now docker.socket
+	sudo systemctl enable --now docker.socket
 }
 
 # Function to set up dotfiles
