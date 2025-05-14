@@ -131,5 +131,5 @@ setup_docker
 setup_dotfiles
 change_shell
 
-echo "Setup complete! Please log out and log back in for changes to take effect."
+echo "Setup complete!"
 exit 0
