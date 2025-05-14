@@ -15,8 +15,7 @@ install_packages() {
 		curl wget tar unzip openssh pyenv python-pip python-pynvim \
 		ripgrep lazygit lua51 luarocks go npm gdu bottom \
 		tree-sitter-cli fd fzf terraform tmux ldns dos2unix \
-		docker docker-buildx
-	ldns kustomize || {
+		docker docker-buildx rsync kustomize || {
 		echo "Package installation failed"
 		exit 1
 	}
@@ -35,11 +34,53 @@ install_packages() {
 
 	cd ~ || exit 1
 
-	# Install kind using yay
+	# Install using yay
 	yay -S --noconfirm kind go-yq aws-cli-bin || {
-		echo "Failed to install kind"
+		echo "yay package installation failed"
 		exit 1
 	}
+}
+
+# Function to set up SSH
+setup_ssh() {
+	echo "Setting up SSH..."
+	mkdir -p ~/.ssh
+	chmod 0700 ~/.ssh
+
+	# Copy SSH with error handling
+	if ! cp /mnt/c/Users/apayne/.ssh/* ~/.ssh/; then
+		echo "Failed to copy SSH"
+	else
+		chmod 0600 ~/.ssh/*
+	fi
+}
+
+setup_gitconfig() {
+	echo "Setting up gitconfig..."
+
+	if ! cp /mnt/c/Users/apayne/.gitconfig ~/.gitconfig; then
+		echo "Failed to copy gitconfig"
+	else
+		chmod 0600 ~/.gitconfig
+	fi
+}
+
+setup_ca() {
+	echo "Setting up ca..."
+
+	if ! cp /mnt/c/Users/apayne/ca.crt ~/ca.crt; then
+		echo "Failed to copy ca"
+	else
+		sudo trust anchor ~/ca.crt
+	fi
+}
+
+setup_docker() {
+	echo "Setting up docker..."
+
+	groups
+	sudo usermod -aG docker "$USER"
+	enable --now docker.socket
 }
 
 # Function to set up dotfiles
@@ -71,21 +112,6 @@ setup_dotfiles() {
 	cd ~ || exit 1
 }
 
-# Function to set up SSH keys
-setup_ssh() {
-	echo "Setting up SSH keys..."
-	mkdir -p ~/.ssh
-	chmod 0700 ~/.ssh
-
-	# Copy SSH keys with error handling
-	if ! cp /mnt/c/Users/apayne/.ssh/* ~/.ssh/; then
-		echo "Failed to copy SSH keys"
-		exit 1
-	fi
-
-	chmod 0600 ~/.ssh/*
-}
-
 # Function to change the default shell to zsh
 change_shell() {
 	echo "Changing default shell to zsh..."
@@ -98,8 +124,11 @@ change_shell() {
 # Main script execution
 cd ~ || exit 1
 install_packages
-setup_dotfiles
 setup_ssh
+setup_gitconfig
+setup_ca
+setup_docker
+setup_dotfiles
 change_shell
 
 echo "Setup complete! Please log out and log back in for changes to take effect."

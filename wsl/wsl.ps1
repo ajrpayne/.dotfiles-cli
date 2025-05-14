@@ -8,3 +8,6 @@ wsl -d archlinux ../github/.dotfiles-cli/wsl/wsl-user.sh
 wsl --terminate archlinux
 wsl -l -v
 wsl -d archlinux ../github/.dotfiles-cli/wsl/wsl-setup.sh
+wsl --terminate archlinux
+wsl -l -v
+wsl -d archlinux
