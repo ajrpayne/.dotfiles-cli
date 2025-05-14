@@ -56,10 +56,10 @@ setup_ssh() {
 }
 
 setup_gitconfig() {
-	echo "Setting up gitconfig..."
+	echo "Setting up .gitconfig..."
 
 	if ! cp /mnt/c/Users/apayne/.gitconfig ~/.gitconfig; then
-		echo "Failed to copy gitconfig"
+		echo "Failed to copy .gitconfig"
 	else
 		chmod 0600 ~/.gitconfig
 	fi
