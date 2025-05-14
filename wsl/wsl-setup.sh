@@ -65,16 +65,6 @@ setup_gitconfig() {
 	fi
 }
 
-setup_ca() {
-	echo "Setting up ca..."
-
-	if ! cp /mnt/c/Users/apayne/ca.crt ~/ca.crt; then
-		echo "Failed to copy ca"
-	else
-		sudo trust anchor ~/ca.crt
-	fi
-}
-
 setup_docker() {
 	echo "Setting up docker..."
 
@@ -126,7 +116,6 @@ cd ~ || exit 1
 install_packages
 setup_ssh
 setup_gitconfig
-setup_ca
 setup_docker
 setup_dotfiles
 change_shell

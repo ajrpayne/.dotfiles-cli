@@ -1,5 +1,16 @@
 #!/bin/bash
 
+setup_ca() {
+  echo "Setting up ca..."
+
+  if ! cp /mnt/c/Users/apayne/ca.crt ~/ca.crt; then
+    echo "Failed to copy ca"
+  else
+    trust anchor ~/ca.crt
+  fi
+}
+setup_ca
+
 # Update the package database and upgrade all packages
 pacman -Syu --noconfirm
 
