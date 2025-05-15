@@ -73,6 +73,14 @@ setup_docker() {
 	sudo systemctl enable --now docker.socket
 }
 
+setup_npm() {
+	echo "Setting up npm cafile..."
+
+	if ! npm config set cafile /opt/ca.crt; then
+		echo "Failed to setup npm cafile"
+	fi
+}
+
 # Function to set up dotfiles
 setup_dotfiles() {
 	echo "Cloning dotfiles repository..."
@@ -117,6 +125,7 @@ install_packages
 setup_ssh
 setup_gitconfig
 setup_docker
+setup_npm
 setup_dotfiles
 change_shell
 

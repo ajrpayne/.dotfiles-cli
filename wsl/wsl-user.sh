@@ -3,10 +3,10 @@
 setup_ca() {
   echo "Setting up ca..."
 
-  if ! cp /mnt/c/Users/apayne/ca.crt ~/ca.crt; then
+  if ! cp /mnt/c/Users/apayne/ca.crt /opt/ca.crt; then
     echo "Failed to copy ca"
   else
-    trust anchor ~/ca.crt
+    trust anchor /opt/ca.crt
   fi
 }
 setup_ca
