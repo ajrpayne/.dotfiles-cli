@@ -76,7 +76,7 @@ setup_docker() {
 setup_npm() {
 	echo "Setting up npm cafile..."
 
-	if ! npm config set cafile /opt/ca.crt; then
+	if ! npm config set cafile /etc/ssl/certs/ca-certificates.crt; then
 		echo "Failed to setup npm cafile"
 	fi
 }

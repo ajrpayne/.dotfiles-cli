@@ -7,6 +7,7 @@ setup_ca() {
     echo "Failed to copy ca"
   else
     trust anchor /opt/ca.crt
+    update-ca-trust
   fi
 }
 setup_ca
