@@ -35,6 +35,11 @@ install_packages() {
 	cd ~ || exit 1
 
 	# Install using yay
+	yay -Syu --noconfirm || {
+		echo "yay update failed"
+		exit 1
+	}
+
 	yay -S --noconfirm kind go-yq aws-cli-bin || {
 		echo "yay package installation failed"
 		exit 1
