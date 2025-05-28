@@ -3,6 +3,7 @@ cd "$HOME\wsl"
 
 ..\github\.dotfiles-cli\wsl\wsl.ps1
 
+# tar.gz
 wsl --update
 wsl -l -v
 wsl --import arch ./arch arch.tar.gz
@@ -13,6 +14,7 @@ rm .\arch.tar.gz
 wsl --export arch --format tar.gz arch.tar.gz
 wsl --unregister arch
 
+# vhd
 wsl --update
 wsl -l -v
 wsl --import arch ./arch arch.vhdx --vhd
