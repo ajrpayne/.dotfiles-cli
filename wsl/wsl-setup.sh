@@ -15,7 +15,7 @@ install_packages() {
 		curl wget tar unzip openssh pyenv python-pip python-pynvim \
 		ripgrep lazygit lua51 luarocks go npm gdu bottom \
 		tree-sitter-cli fd fzf terraform tmux ldns dos2unix \
-		docker docker-buildx rsync kustomize || {
+		docker docker-buildx rsync kustomize jq || {
 		echo "Package installation failed"
 		exit 1
 	}
