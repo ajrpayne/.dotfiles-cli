@@ -10,7 +10,7 @@ setup_ca() {
     update-ca-trust
   fi
 }
-setup_ca
+#setup_ca
 
 # Update the package database and upgrade all packages
 pacman -Syu --noconfirm

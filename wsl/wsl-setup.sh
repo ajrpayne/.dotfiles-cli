@@ -11,11 +11,47 @@ install_packages() {
 	}
 
 	sudo pacman -S --noconfirm --needed \
-		zsh nvim git base-devel podman kubectl stow which make zig \
-		curl wget tar unzip openssh pyenv python-pip python-pynvim \
-		ripgrep lazygit lua51 luarocks go npm gdu bottom \
-		tree-sitter-cli fd fzf terraform tmux ldns dos2unix \
-		docker docker-buildx rsync kustomize jq || {
+		xclip \
+		zsh \
+		nvim \
+		git \
+		base-devel \
+		stow \
+		which \
+		make \
+		zig \
+		curl \
+		wget \
+		tar \
+		unzip \
+		openssh \
+		pyenv \
+		python-pip \
+		python-pynvim \
+		ripgrep \
+		lazygit \
+		lua51 \
+		luarocks \
+		go \
+		npm \
+		gdu \
+		bottom \
+		tree-sitter-cli \
+		fd \
+		fzf \
+		terraform \
+		tmux \
+		ldns \
+		dos2unix \
+		docker \
+		docker-buildx \
+		docker-compse \
+		kubectl \
+		kustomize \
+		rsync \
+		aws-cli-v2 \
+		azure-cli \
+		jq || {
 		echo "Package installation failed"
 		exit 1
 	}
@@ -40,7 +76,7 @@ install_packages() {
 		exit 1
 	}
 
-	yay -S --noconfirm kind go-yq aws-cli-bin || {
+	yay -S --noconfirm kind go-yq || {
 		echo "yay package installation failed"
 		exit 1
 	}
