@@ -45,7 +45,7 @@ install_packages() {
 		dos2unix \
 		docker \
 		docker-buildx \
-		docker-compse \
+		docker-compose \
 		kubectl \
 		kustomize \
 		rsync \
@@ -166,7 +166,7 @@ install_packages
 setup_ssh
 setup_gitconfig
 setup_docker
-setup_npm
+#setup_npm
 setup_dotfiles
 change_shell
 
