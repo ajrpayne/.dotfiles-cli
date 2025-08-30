@@ -145,7 +145,7 @@ setup_dotfiles() {
 	}
 
 	echo "Stowing dotfiles..."
-	stow zsh fish starship nvim.astro || {
+	stow fish starship zsh nvim.astro || {
 		echo "Failed to stow dotfiles"
 		exit 1
 	}
@@ -153,10 +153,10 @@ setup_dotfiles() {
 	cd ~ || exit 1
 }
 
-# Function to change the default shell to zsh
+# Function to change the default shell to fish
 change_shell() {
-	echo "Changing default shell to zsh..."
-	if ! chsh -s /bin/zsh; then
+	echo "Changing default shell to fish..."
+	if ! chsh -s /usr/bin/fish; then
 		echo "Failed to change shell"
 		exit 1
 	fi
