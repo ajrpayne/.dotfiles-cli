@@ -1,8 +1,8 @@
 export PYENV_ROOT="$HOME/.pyenv"
 
 # If you come from bash you might have to change your $PATH.
-if ! [[ "$PATH" =~ "$HOME/.cargo/bin:$HOME/.local/go/bin:$HOME/go/bin:$PYENV_ROOT/bin:$HOME/.local/bin:" ]]; then
-  PATH="$HOME/.cargo/bin:$HOME/.local/go/bin:$HOME/go/bin:$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+if ! [[ "$PATH" =~ "$PYENV_ROOT/bin:$HOME/.cargo/bin:$HOME/.local/go/bin:$HOME/go/bin:$HOME/.local/bin:" ]]; then
+  PATH="$PYENV_ROOT/bin:$HOME/.cargo/bin:$HOME/.local/go/bin:$HOME/go/bin:$HOME/.local/bin:$PATH"
 fi
 export PATH
 
