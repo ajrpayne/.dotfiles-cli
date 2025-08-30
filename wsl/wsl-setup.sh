@@ -145,7 +145,7 @@ setup_dotfiles() {
 	}
 
 	echo "Stowing dotfiles..."
-	stow zsh nvim.astro || {
+	stow zsh fish starship nvim.astro || {
 		echo "Failed to stow dotfiles"
 		exit 1
 	}
