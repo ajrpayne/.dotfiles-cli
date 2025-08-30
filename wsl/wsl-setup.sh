@@ -27,6 +27,7 @@ install_packages() {
 		tar \
 		unzip \
 		openssh \
+		polkit \
 		pyenv \
 		python-pip \
 		python-pynvim \
