@@ -56,6 +56,7 @@ style = "bg:color_bg1 fg:color_fg0"
 [os.symbols]
 Fedora = " "
 Ubuntu = " "
+Arch = " "
 
 [username]
 show_always = true
