@@ -13,6 +13,8 @@ install_packages() {
 	sudo pacman -S --noconfirm --needed \
 		xclip \
 		zsh \
+		fish \
+		starship \
 		nvim \
 		git \
 		base-devel \
