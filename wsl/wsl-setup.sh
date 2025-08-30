@@ -14,7 +14,7 @@ install_packages() {
 		fish \
 		starship \
 		zsh \
-		xclip \
+		wl-clipboard xdg-utils mailcap \
 		nvim \
 		git \
 		base-devel \
