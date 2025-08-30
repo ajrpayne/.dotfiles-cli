@@ -21,12 +21,10 @@ $python\
 [ ](fg:color_blue bg:color_blue)\
 $docker_context\
 [ ](fg:color_bg3 bg:color_bg3)\
-[ ](fg:color_bg1 bg:color_bg1)\
 $fill\
 $status\
-[ ](fg:color_bg1 bg:color_bg1)\
-$cmd_duration\
 [ ](fg:color_bg3 bg:color_bg3)\
+$cmd_duration\
 [ ](fg:color_blue bg:color_blue)\
 [ ](fg:color_aqua bg:color_aqua)\
 $container\
@@ -42,14 +40,14 @@ palette = 'gruvbox_dark'
 [palettes.gruvbox_dark]
 color_fg0 = '#000000'
 color_bg1 = '#ebdbb2'
-color_bg3 = '#bdae93'
+color_bg3 = '#665c54'
 color_purple = '#b16286'
 color_blue = '#458588'
 color_aqua = '#689d6a'
 color_green = '#98971a'
 color_yellow = '#d79921'
 color_orange = '#d65d0e'
-color_red = '#cc241d'
+color_red = '#fb4934'
 
 [os]
 disabled = false
@@ -139,12 +137,12 @@ style = 'white'
 
 [status]
 disabled = false
-style = "bg:color_bg1"
-format = '[[ $symbol$status](fg:bold red bg:color_bg1)]($style)'
+style = "bg:color_bg3"
+format = '[[ $symbol$status](fg:color_red bg:color_bg3)]($style)'
 
 [cmd_duration]
-style = "bg:color_bg3"
-format = '[[ took $duration ](fg:color_fg0 bg:color_bg3)]($style)'
+style = "bg:color_blue"
+format = '[[ took $duration ](fg:color_fg0 bg:color_blue)]($style)'
 
 [container]
 style = "bg:color_yellow"
