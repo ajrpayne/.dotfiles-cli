@@ -21,15 +21,12 @@ pacman -S --noconfirm --needed sudo
 # Set a password for the root user (ensure to replace 'your_password' with a secure password)
 passwd
 
-sed -i 's/^#en_CA\.UTF-8 UTF-8$/en_CA.UTF-8 UTF-8/' /etc/locale.gen
-sed -i 's/^#en_US\.UTF-8 UTF-8$/en_US.UTF-8 UTF-8/' /etc/locale.gen
+sed -i 's/#en_CA.UTF-8 UTF-8/en_CA.UTF-8 UTF-8/' /etc/locale.gen
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 grep "en_CA.UTF-8" /etc/locale.gen
 grep "en_US.UTF-8" /etc/locale.gen
 locale-gen
 locale -a
-localectl set-locale LANG=en_CA.UTF-8
-unset LANG
-source /etc/profile.d/locale.sh
 locale
 
 # Create a new user 'ajrpayne' with a home directory, primary group 'users', additional group 'wheel', and default shell '/bin/bash'
