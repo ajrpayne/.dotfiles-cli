@@ -26,6 +26,7 @@ $status\
 [ ](fg:color_bg3 bg:color_bg3)\
 $cmd_duration\
 [ ](fg:color_blue bg:color_blue)\
+$terraform\
 [ ](fg:color_aqua bg:color_aqua)\
 $container\
 [ ](fg:color_yellow bg:color_yellow)\
@@ -67,7 +68,7 @@ format = '[ $user]($style)'
 [directory]
 style = "bg:color_yellow fg:color_fg0"
 format = "[ $path]($style)"
-truncation_length = 6
+truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -139,11 +140,15 @@ style = 'white'
 [status]
 disabled = false
 style = "bg:color_bg3"
-format = '[[ $symbol$status](fg:color_red bg:color_bg3)]($style)'
+format = '[[ $symbol $status](bold fg:color_red bg:color_bg3)]($style)'
 
 [cmd_duration]
 style = "bg:color_blue"
 format = '[[ took $duration ](fg:color_fg0 bg:color_blue)]($style)'
+
+[terraform]
+style = "bg:color_aqua"
+format = '[[ via $symbol$workspace](fg:color_fg0 bg:color_aqua)]($style)'
 
 [container]
 style = "bg:color_yellow"
