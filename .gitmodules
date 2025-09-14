@@ -1,6 +1,6 @@
 [submodule "nvim.astro/.config/nvim"]
 	path = nvim.astro/.config/nvim
-	url = https://github.com/ajrpayne/nvim.astro.git
+	url = ../nvim.astro.git
 [submodule "zsh/.oh-my-zsh-plugins/themes/powerlevel10k"]
 	path = zsh/.oh-my-zsh-plugins/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
