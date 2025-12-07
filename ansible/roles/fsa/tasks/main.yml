@@ -1,0 +1,9 @@
+- name: Copy sddm conf
+  become: true
+  ansible.builtin.template:
+    src: "{{ item }}"
+    dest: "/etc/sddm.conf.d/{{ item | basename | regex_replace('\\.j2$', '') }}"
+    directory_mode: "755"
+    mode: "644"
+  with_fileglob:
+    - ../templates/sddm.conf.d/*.j2
