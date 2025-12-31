@@ -10,3 +10,4 @@ if status is-interactive
     end
 end
 starship init fish | source
+zoxide init fish | source
