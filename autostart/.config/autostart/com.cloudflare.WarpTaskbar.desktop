@@ -10,3 +10,4 @@ Icon=zero-trust-orange
 Terminal=false
 StartupWMClass=Cloudflare Zero Trust
 Hidden=true
+X-GNOME-Autostart-enabled=false
