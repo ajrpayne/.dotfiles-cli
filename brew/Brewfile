@@ -1,6 +1,7 @@
 tap "aws/tap"
 tap "fluxcd/tap"
 tap "hashicorp/tap"
+brew "age"
 brew "ast-grep"
 brew "atuin"
 brew "chezmoi"
