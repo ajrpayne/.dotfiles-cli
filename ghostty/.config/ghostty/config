@@ -4,3 +4,4 @@ window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
 window-padding-color = extend
+font-size = 16.0
